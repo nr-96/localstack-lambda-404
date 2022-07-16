@@ -1,0 +1,15 @@
+{
+  "name": "localstack-lambda-404",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy --stage local --verbose --force"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^3.21.0",
+    "serverless-localstack": "^0.4.36"
+  }
+}

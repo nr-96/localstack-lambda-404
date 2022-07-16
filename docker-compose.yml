@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  localstack-lambda-404:
+    image: localstack/localstack:latest
+    container_name: localstack-lambda-404
+    ports:
+      - 4566:4566           
+    environment:
+      - DEBUG=1
+      - PERSISTENCE=1
+      - PERSIST_ALL=1
+      - LAMBDA_EXECUTOR=docker-reuse
+      - LAMBDA_STAY_OPEN_MODE=0
+      - LAMBDA_REMOTE_DOCKER=0
+      - REQUIRE_PRO=1
+      - LOCALSTACK_API_KEY=<pro-key>
+    volumes:
+      - .cache/localstack:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
